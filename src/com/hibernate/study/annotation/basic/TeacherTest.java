@@ -1,4 +1,6 @@
-package com.hibernate.study.model.annotation;
+package com.hibernate.study.annotation.basic;
+
+import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,6 +20,9 @@ public class TeacherTest {
 		teacher.setId(1);
 		teacher.setName("teahcer2");
 		teacher.setTitle("高级");
+		teacher.setMyMoney(999999999);
+		teacher.setBirthday(new Date());
+		teacher.setGender(Gender.FEMALE);
 		
 		Configuration cfg = new AnnotationConfiguration();
 		//cfg.configure()不加参数默认在classpath下面找到hibernage.cfg.xml

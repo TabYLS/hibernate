@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.hibernate.study.model.xml">
+<hibernate-mapping package="com.hibernate.study.xml">
 	<!-- <class name="Student" ></class> 也可以-->
 	<class name="Student" table="Student">
 		<!--

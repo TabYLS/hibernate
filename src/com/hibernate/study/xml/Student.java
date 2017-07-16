@@ -1,4 +1,4 @@
-package com.hibernate.study.model.xml;
+package com.hibernate.study.xml;
 /**
 * @author 叶林生 
 * @date：2017年7月13日 下午9:43:39

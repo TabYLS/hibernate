@@ -1,4 +1,4 @@
-package com.hibernate.study.model.annotation.basic;
+package com.hibernate.study.annotation.basic;
 
 import java.util.Date;
 
