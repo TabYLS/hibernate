@@ -18,6 +18,7 @@ import javax.persistence.Transient;
 * 实体bean中所有的非static非transient的属性都可以被持久化, 
 * 除非你将其注解为@Transient.所有没有定义注解的属性等价于在其上面添加了@Basic注解. 
 * 通过 @Basic注解可以声明属性的获取策略(fetch strategy)
+* 如果实体类中的属性名字和表中的列相同，则不需要加入注解@Column
 */
 @Entity(name="basic")
 @Table(name="basic_teacher")
