@@ -1,1 +1,1 @@
-#hibernate��ѧϰ�ʼ�
+# hibernate的学习笔记
