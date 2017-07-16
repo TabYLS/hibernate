@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+       <!--  <property name="connection.pool_size">1</property> -->
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <!-- <property name="current_session_context_class">thread</property> -->
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!-- hibernate自动生成建表语句 -->
+        <property name="hbm2ddl.auto">create</property>
+
+		<!-- 如果注解和配置文件同时使用，记得加载配置文件的那个类应该使用AnnotationConfiguration这个类来创建对象 -->
+        <mapping resource="com/hibernate/study/model/xml/Student.hbm.xml"/>
+	
+		<!-- 入门配置 -->
+		<mapping class="com.hibernate.study.model.annotation.Teacher"/>
+		<!-- 1.基本配置的使用@Transient（忽略某个不进行持久化）
+		
+			2.@Temporal(TemporalType.DATE)
+			注解日期TemporalType.DATE（只是日期不包含时间），
+			TemporalType.TIME(只是时间没有日期)，
+			TemporalType.TIMESTAMP（时间和日期）
+			
+			3.注解枚举类型EnumType.ORDINAL(枚举的下标),EnumType.STRING枚举的值
+		 -->
+		<mapping class="com.hibernate.study.model.annotation.basic.Teacher"/>
+    </session-factory>
+
+</hibernate-configuration>

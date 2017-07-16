@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.study.model.xml">
+	<!-- <class name="Student" ></class> 也可以-->
+	<class name="Student" table="Student">
+		<!--
+		也可以
+		<id name="id" column="id"></id>
+		<property name="name" column="name"></property>
+		<property name="age" column="age"></property> -->
+		<id name="id" column="id"></id>
+		<property name="name" column="name"></property>
+		<property name="age" column="age"></property>
+	</class>
+</hibernate-mapping>
