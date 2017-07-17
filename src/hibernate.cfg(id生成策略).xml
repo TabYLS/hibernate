@@ -32,8 +32,9 @@
         <!-- hibernate自动生成建表语句 -->
         <property name="hbm2ddl.auto">create</property>
 
-		<!-- 如果注解和配置文件同时使用，记得加载配置文件的那个类应该使用AnnotationConfiguration这个类来创建对象 -->
+		<!-- xml的配置方式 -->
         <mapping resource="com/hibernate/study/id/xml/Student.hbm.xml"/>
+        <!-- 注解的方式 -->
         <mapping class="com.hibernate.study.id.annotation.Teacher"/>
 	
     </session-factory>
