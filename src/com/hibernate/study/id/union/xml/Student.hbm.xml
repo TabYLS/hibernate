@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.study.id.union.xml">
+	<!-- <class name="Student" ></class> 也可以-->
+	<class name="Student" table="Student">
+		<!--
+		也可以
+		<id name="id" column="id"></id>
+		<property name="name" column="name"></property>
+		<property name="age" column="age"></property> -->
+		<composite-id name="pk" class="com.hibernate.study.id.union.xml.StudentPK">
+			<key-property name="id" column="id"/>
+			<key-property name="name"/>
+		</composite-id>
+		<property name="age" column="age"></property>
+	</class>
+</hibernate-mapping>
