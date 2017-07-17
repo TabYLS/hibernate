@@ -1,0 +1,1 @@
+基于注解的主键生成策略详细请参考：http://www.cnblogs.com/yangy608/archive/2012/09/25/2701514.html

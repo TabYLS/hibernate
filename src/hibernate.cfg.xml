@@ -13,7 +13,7 @@
         <property name="connection.password">123456</property>
 
         <!-- JDBC connection pool (use the built-in) -->
-       <!--  <property name="connection.pool_size">1</property> -->
+        <!-- <property name="connection.pool_size">1</property> -->
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -34,6 +34,7 @@
 
 		<!-- 如果注解和配置文件同时使用，记得加载配置文件的那个类应该使用AnnotationConfiguration这个类来创建对象 -->
         <mapping resource="com/hibernate/study/id/xml/Student.hbm.xml"/>
+        <mapping class="com.hibernate.study.id.annotation.Teacher"/>
 	
     </session-factory>
 

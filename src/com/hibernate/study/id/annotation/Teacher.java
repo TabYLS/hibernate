@@ -1,6 +1,8 @@
 package com.hibernate.study.id.annotation;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -19,6 +21,10 @@ public class Teacher {
 	private String title;
 	
 	@Id
+	//identity由底层数据库生成标识符。identity是由数据库自己生成的，但这个主键必须设置为自增长，
+	//使用identity的前提条件是底层数据库支持自动增长字段类型，如DB2、SQL Server、MySQL、Sybase和HypersonicSQL等，
+	//Oracle这类没有自增字段的则不支持。
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
