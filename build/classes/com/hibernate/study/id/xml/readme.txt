@@ -1,0 +1,1 @@
+基于xml的主键生成策略详细请参考：http://www.cnblogs.com/hoobey/p/5508992.html

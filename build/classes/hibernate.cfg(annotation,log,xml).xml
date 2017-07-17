@@ -33,8 +33,22 @@
         <property name="hbm2ddl.auto">create</property>
 
 		<!-- 如果注解和配置文件同时使用，记得加载配置文件的那个类应该使用AnnotationConfiguration这个类来创建对象 -->
-        <mapping resource="com/hibernate/study/id/xml/Student.hbm.xml"/>
+        <mapping resource="com/hibernate/study/xml/Student.hbm.xml"/>
 	
+		<!-- 入门配置 -->
+		<mapping class="com.hibernate.study.annotation.Teacher"/>
+		<!-- 1.基本配置的使用@Transient（忽略某个不进行持久化）
+		
+			2.@Temporal(TemporalType.DATE)
+			注解日期TemporalType.DATE（只是日期不包含时间），
+			TemporalType.TIME(只是时间没有日期)，
+			TemporalType.TIMESTAMP（时间和日期）
+			
+			3.注解枚举类型EnumType.ORDINAL(枚举的下标),EnumType.STRING枚举的值
+		 -->
+		<mapping class="com.hibernate.study.annotation.basic.Teacher"/>
+		
+		<mapping class="com.hibernate.study.log.Teacher"/>
     </session-factory>
 
 </hibernate-configuration>
