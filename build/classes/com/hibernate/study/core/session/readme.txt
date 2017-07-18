@@ -1,3 +1,3 @@
-Configuration:读取hibernate.cfg.xml配置文件，获得所有hibernate运行时的参数
-SessionFactory：SessionFactory接口负责初始化Hibernate。它充当数据存储源的代理，并负责创建Session对象。
-session：应用程序和数据库的一次交互（会话）。在这个Session中，包含了一般的持久化方法（CRUD），而且，Session是一个轻量级对象（线程不安全），通常将每个Session实例和一个数据库事务绑定，也就是每执行一个数据库事务，都应该先创建一个新的Session实例，
+Configuration:读取hibernate.cfg.xml配置文件，获得所有hibernate运行时的参数，初始化mapping中的Teacher对象等等
+SessionFactory：SessionFactory接口负责初始化Hibernate。它充当数据存储源的代理，并负责创建Session对象。初步初始化，对于一些与数据库相关的资源初始化，比如载入驱动，初始化用户名和密码，创建表，为下一步提供需要的资源
+session：应用程序和数据库的一次交互（会话）。在这个Session中，包含了一般的持久化方法（CRUD），而且，Session是一个轻量级对象（线程不安全），通常将每个Session实例和一个数据库事务绑定，也就是每执行一个数据库事务，都应该先创建一个新的Session实例

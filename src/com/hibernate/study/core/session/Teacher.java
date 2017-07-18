@@ -18,6 +18,10 @@ public class Teacher {
 	private String name;
 	private String title;
 	
+	public Teacher(){
+		System.out.println("i am a teacher");
+	}
+	
 	@Id
 	public int getId() {
 		return id;

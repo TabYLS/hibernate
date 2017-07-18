@@ -20,8 +20,10 @@ public class TeacherTest {
 		teacher.setTitle("高级");
 		
 		Configuration cfg = new AnnotationConfiguration();
+		System.out.println("..........................Before SessionFactory...................");
 		//cfg.configure()不加参数默认在classpath下面找到hibernage.cfg.xml
 		SessionFactory sessionFactory = cfg.configure().buildSessionFactory();
+		System.out.println("................................Before Session.....................");
 		Session session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		session.save(teacher);
