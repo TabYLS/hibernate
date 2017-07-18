@@ -33,8 +33,7 @@
         <!-- <property name="hbm2ddl.auto">create</property> -->
         <property name="current_session_context_class">thread</property>
 		<!-- 基于注解 -->
-		<mapping class="com.hibernate.study.core.threeStatus.update.Teacher"/>
-		<mapping resource="com/hibernate/study/core/threeStatus/update/Student.hbm.xml"/>
+		<mapping class="com.hibernate.study.core.threeStatus.Teacher"/>
 		
 	
     </session-factory>
