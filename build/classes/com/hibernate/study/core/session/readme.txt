@@ -7,8 +7,8 @@ openSession和getCurrentSession方法
 （1）openSession每次打开都是新的Session，所以多次获取的Session实例是不同的，并且需要人为的调用close方法进行Session关闭。
 （2）getCurrentSession是从当前上下文中获取Session并且会绑定到当前线程，第一次调用时会创建一个Session实例，如果该Session未关闭，后续多次获取的是同一个Session实例；事务提交或者回滚时会自动关闭Sesison，无需人工关闭。
 使用getCurrentSession时，需要在配置文件中添加如下：
-（1）如果使用的是本地事务（JDBC事务），管理事物的时候用的是Connection的事物（单独一个数据的管理事物），
+（1）如果使用的是本地事务（JDBC事务），管理事物的时候用的是Connection的事物（单独一个数据的管理事物），事物环境是单独的某个数据库的connection
 <property name="current_session_context_class">thread</property>
-（2）如果使用的是全局事务（JTA事务）jta一般用于分布式，分布式数据库中使用的上下文是jta来管理事物
+（2）如果使用的是全局事务（JTA事务）jta一般用于分布式，分布式数据库中使用的上下文是jta来管理事物，jta的事物是需要容器来管理，所以jta的事物环境一般都是容器比如tomcat，spring，jboss等
 <property name="current_session_context_class">jta</property>
 （如果使用了spring就要将上下文转移到spring当中）

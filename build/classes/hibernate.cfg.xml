@@ -33,7 +33,8 @@
         <!-- <property name="hbm2ddl.auto">create</property> -->
         <property name="current_session_context_class">thread</property>
 		<!-- 基于注解 -->
-		<mapping class="com.hibernate.study.core.threeStatus.basicMethod.Teacher"/>
+		<mapping class="com.hibernate.study.orm.one2one.uni.fk.Husband"/>
+		<mapping class="com.hibernate.study.orm.one2one.uni.fk.Wife"/>
 		
 	
     </session-factory>

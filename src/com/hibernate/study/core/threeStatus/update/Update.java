@@ -13,7 +13,7 @@ import org.junit.Test;
 */
 
 public class Update {
-	//先获取，再更新，会将session中的所有信息全部重新再更新一遍，detached状态可以更新（会全部更新，效率低）
+	//先获取，再更新，会将session中的所有信息全部重新再更新一遍，detached状态可以更新（会更新全部字段，效率低）
 	@Test
 	public void testUpdate1() {
 		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -45,7 +45,7 @@ public class Update {
 		session2.getTransaction().commit();
 	}
 	
-	//transient状态下的内容也能更新到数据库中，但是，需要指定id（会全部更新，效率低）
+	//transient状态下的内容也能更新到数据库中，但是，需要指定id（会更新全部字段，效率低）
 	@Test
 	public void testUpdate3() {
 		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -61,7 +61,7 @@ public class Update {
 	}
 	
 	//查询出来，做了修改，再做提交，不主动update也能实现更新，
-	//当发现session中的数据和数据库中的不一致的时候，会将session中的数据更新到数据库中（会全部更新，效率低）
+	//当发现session中的数据和数据库中的不一致的时候，会将session中的数据更新到数据库中（会更新全部字段，效率低）
 	//这种情况和以上的情况有所不同，这种方式如果发现session中的数据和数据库中的一致就不会发执行更新，
 	//但是更新的时候就会更新全部字段,以上的不管是否相同，都会更新
 	@Test

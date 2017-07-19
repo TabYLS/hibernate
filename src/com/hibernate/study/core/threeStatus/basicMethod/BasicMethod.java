@@ -3,6 +3,7 @@ package com.hibernate.study.core.threeStatus.basicMethod;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.junit.Test;
 
 
@@ -85,6 +86,12 @@ public class BasicMethod {
 		System.out.println(teacher.getName());
 		
 		session.getTransaction().commit();
+	}
+	
+	//SchemaExport生成建表语句
+	@Test
+	public void schemaExport() {
+		new SchemaExport(new AnnotationConfiguration().configure()).create(true, true);;
 	}
 
 }
