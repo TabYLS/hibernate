@@ -33,12 +33,11 @@
         <!-- <property name="hbm2ddl.auto">create</property> -->
         <property name="current_session_context_class">thread</property>
 		<!-- 基于注解 -->
-		<mapping class="com.hibernate.study.orm.one2one.uni.fk.composite.Husband"/>
-		<mapping class="com.hibernate.study.orm.one2one.uni.fk.composite.Wife"/>
+		<!-- <mapping class="com.hibernate.study.orm.component.Husband"/>
+		<mapping class="com.hibernate.study.orm.component.Wife"/> -->
 		
 		<!-- 基于xml的方式 -->
-		<!-- <mapping resource="com/hibernate/study/orm/one2one/bi/pk/xml/StuIdCard.hbm.xml"/>
-		<mapping resource="com/hibernate/study/orm/one2one/bi/pk/xml/Student.hbm.xml"/> -->
+		<mapping resource="com/hibernate/study/orm/component/xml/Student.hbm.xml"/>
 		
 	
     </session-factory>
